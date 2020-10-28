@@ -1,3 +1,8 @@
+      /** @Author : Jaler
+        * @Date : 2020/10/28 10:49
+        * @describe : 对于Java的基本数据类型和运算符进行测试和学习
+        * @Version : 1.0
+        */
 public class DataType {
     public static void main(String[] args) {
         //整型变量 大小为4 与操作系统无关
@@ -120,5 +125,104 @@ public class DataType {
         a = 20;
 
         java: 无法为最终变量a分配值*/
+
+        //类型转换
+        /*int a=10;
+        long b =20;
+        a=b;//不兼容的类型: 从long转换到int可能会有损失
+        b=a;*/
+
+        /*int a = 10;
+        double b = 1.0;
+        a = b;//不兼容的类型: 从double转换到int可能会有损失
+        b = a;*/
+
+        //long表示的范围更大，可以将int赋值给long，但是不能将long赋值给int
+        //double表示范围更大，可以将int赋值给double，但是不能将double赋值给int
+        //结论：不同数字类型变量之间的赋值，表示范围更小的类型能隐式转换成较大范围的类型，反之则不行
+
+        /*int a = 10;
+        boolean b = true;
+        b = a;//不兼容的类型: int无法转换为boolean
+        a = b;*/
+
+        //结论：int和boolean是两种毫不相干的类型，不能相互赋值
+
+        /*byte a = 100;
+        byte b = 256;//从int转换到byte可能会有损失*/
+
+        //byte 是一个自己范围为 -128~127
+
+
+        //强制类型转化
+        /*int a = 0;
+        double b =10.5;
+        a=(int)b;*/
+
+        /*int a=10;
+        boolean b=false;
+        b=(boolean)a;//不兼容的类型: int无法转换为boolean*/
+
+        //结论：
+        // 1.强制类型转化会导致精度丢失
+        // 2.互不相干的类型之间无法强转
+
+
+        //数值提升
+        /*int a = 10;
+        long b = 20;
+        int c = a + b;//不兼容的类型: 从long转换到int可能会有损失
+        long d = a + b;*/
+
+
+        /*byte a=10;
+        byte b=20;
+        byte c=a+b;//从int转换到byte可能会有损失
+        System.out.println(c);*/
+
+        //在计算a+b时，会先将a和b提升为int，再将结果赋值给c
+
+       /* byte a=10;
+        byte b=20;
+        byte c=(byte)(a+b);
+        System.out.println(c);*/
+
+        //结论：
+        //1.不同类型的数据混合运算，范围小的会提升成范围大的
+        //2.对于short,byte这种4个字节小的类型，会先提升为4个自己，再参与运算
+
+        /*//int转换String
+        int num = 10;
+        //方法1
+        String str1 = num+"";
+        //方法2
+        String str2 = String.valueOf(num);
+
+        System.out.println(str1);
+        System.out.println(str2);*/
+
+        //运算符+，-，*，/
+        /*int a = 1;
+        int b = 2;
+        System.out.println(a/b);//需要使用double来计算*/
+
+        /*int a = 1;
+        int b = 0;
+        System.out.println(a/b);//除数不能为0*/
+
+        //System.out.println(11.5%2.0);//可对浮点数取模
+
+        //关系运算符
+        int a = 10;
+        int b = 20;
+        System.out.println(a == b);
+        System.out.println(a != b);
+        System.out.println(a > b);
+        System.out.println(a < b);
+        System.out.println(a >= b);
+        System.out.println(a <= b);
+
+        //关系运算符返回的值类型都是boolean
+
     }
 }
