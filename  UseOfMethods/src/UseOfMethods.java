@@ -4,6 +4,7 @@ import javax.sound.midi.SoundbankResource;
  * @Author : Jaler
  * @Date : 2020/11/2 19:59
  * @describe :
+ *      1. 掌握理解方法的使用方法
  * @Version : 1.0
  */
 public class UseOfMethods {
