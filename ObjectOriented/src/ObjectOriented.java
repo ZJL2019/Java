@@ -2,7 +2,6 @@
 
 import com.bit.demo1.Animals;
 
-import javax.xml.catalog.Catalog;
 import java.util.*;
 //导入java.util中所有类
 //import static java.lang.System.*;
