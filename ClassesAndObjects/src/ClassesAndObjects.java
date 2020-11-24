@@ -375,7 +375,7 @@ public class ClassesAndObjects {
         现我们自己版本的转换字符串方法.
         @Override在Java中称为 "注解", 此处的 @Override 表示下面实现的 toString 方法是重写了父类的方法.
         */
-       /* Person person = new Person("caocao",19);
+        /*Person person = new Person("caocao",19);
         person.show();
         System.out.println(person);*/
 
