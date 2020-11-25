@@ -85,7 +85,7 @@ public class ObjectOriented {
         /*IShape shape = new Cycle();
         shape.draw();*/
 
-        Cat cat = new Cat("小猫");
+        /*Cat cat = new Cat("小猫");
         walk(cat);
 
         Frog frog = new Frog("小青蛙");
@@ -93,7 +93,29 @@ public class ObjectOriented {
 
 
         Robot robot = new Robot("机器人");
-        walk(robot);
+        walk(robot);*/
+
+        Student[] students = new Student[]{
+                new Student("张三",95),
+                new Student("李四",96),
+                new Student("王五",97),
+                new Student("赵六",92),
+        };
+        //Arrays.sort(students);
+        sort(students);
+        System.out.println(Arrays.toString(students));
+    }
+
+    public static void sort(Comparable[] array) {
+        for (int bound = 0; bound < array.length; bound++) {
+            for (int cur = array.length - 1; cur > bound; cur--) {
+                if (array[cur - 1].compareTo(array[cur]) > 0) {
+                    Comparable tmp = array[cur - 1];
+                    array[cur - 1] = array[cur];
+                    array[cur] = tmp;
+                }
+            }
+        }
     }
 
     public static void walk(IRunning running){
@@ -154,10 +176,10 @@ class Bird extends Animals {
 //组合并没有涉及到特殊的语法(诸如 extends 这样的关键字), 仅仅是将一个类的实例作为另外一个类的字段.
 //这是我们设计类的一种常用方式之一.
 //组合表示 has - a
-class Student {
+/*class Student {
     public Student() {
     }
-}
+}*/
 
 class Teacher {
     public Teacher() {
@@ -317,3 +339,8 @@ class Robot implements IRunning{
         System.out.println(this.name+"正在用轮子跑");
     }
 }
+
+
+
+//接口使用实例
+
